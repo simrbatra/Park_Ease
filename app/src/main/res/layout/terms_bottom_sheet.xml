@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Drag Handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#E3E9FB"
+        android:alpha="0.8"
+        android:scaleY="0.8"
+        android:backgroundTintMode="src_in"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_handle" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTerms"
+        android:text="Terms and condition"
+        android:textColor="#5A78FF"
+        android:textSize="14sp"
+        android:layout_marginStart="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTermsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#697089"
+            android:textSize="14sp"
+            android:lineSpacingExtra="6dp"
+            android:text="These terms and conditions outline the rules and regulations for the use of Parkir.in's Website, located at Parkir.in.\n\nBy accessing this website we assume you accept these terms and conditions. Do not continue to use Parkir.in if you do not agree to take all of the terms and conditions stated on this page.\n\nAll terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance." />
+    </ScrollView>
+</LinearLayout>

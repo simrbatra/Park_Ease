@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Outer building -->
+    <path
+        android:fillColor="#FF81C784"
+        android:pathData="M3,2h18c0.55,0 1,0.45 1,1v18c0,0.55 -0.45,1 -1,1H3c-0.55,0 -1,-0.45 -1,-1V3c0,-0.55 0.45,-1 1,-1z"/>
+
+    <!-- Windows -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M6,6h2v2H6zM10,6h2v2h-2zM14,6h2v2h-2zM6,10h2v2H6zM10,10h2v2h-2zM14,10h2v2h-2zM6,14h2v2H6zM10,14h2v2h-2zM14,14h2v2h-2z"/>
+
+    <!-- Parking sign (P) -->
+    <path
+        android:fillColor="#FF388E3C"
+        android:pathData="M9,19h6c0.55,0 1,-0.45 1,-1v-4c0,-0.55 -0.45,-1 -1,-1H9v6zm1.5,-4.5h2a0.5,0.5 0 1 1 0,1h-2v-1z"/>
+</vector>

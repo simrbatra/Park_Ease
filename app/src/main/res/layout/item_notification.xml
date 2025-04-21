@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/bg_notification_item">
+
+    <View
+        android:id="@+id/sideIndicator"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:layout_alignParentStart="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification Title"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/sideIndicator" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Now"
+        android:textColor="@color/dark_gray"
+        android:textSize="12sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notification message"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/sideIndicator" />
+</RelativeLayout>

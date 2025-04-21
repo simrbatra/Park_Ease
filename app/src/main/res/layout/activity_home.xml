@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Map background -->
+
+    <!-- Top action icons -->
+
+    <ImageView
+        android:id="@+id/mapImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_map_placeholder"
+        app:layout_anchor="@+id/carMarker"
+        app:layout_anchorGravity="center" />
+
+    <LinearLayout
+        android:id="@+id/topActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:layout_gravity="top">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_circle_white"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="Menu" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_circle_white"
+            android:src="@drawable/ic_notification"
+            android:contentDescription="Notifications" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bg_circle_white"
+            android:src="@drawable/ic_car"
+            android:contentDescription="Car" />
+    </LinearLayout>
+
+    <!-- Park Rangeride button -->
+    <TextView
+        android:id="@+id/parkRangerideBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="120dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/bg_hot_pink_rounded"
+        android:text="Park Rangeride"
+        android:textColor="@android:color/white"
+        android:gravity="center_vertical"
+        android:drawableEnd="@drawable/ic_arrow_right"
+        android:drawablePadding="8dp"
+        android:layout_gravity="top|start" />
+
+    <!-- Center car icon -->
+    <ImageView
+        android:id="@+id/carMarker"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_car_blue" />
+
+    <!-- Location category chips -->
+    <HorizontalScrollView
+        android:id="@+id/categoryScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_gravity="top"
+        android:paddingHorizontal="12dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/item_chip" android:id="@+id/chip_home" />
+            <include layout="@layout/item_chip" android:id="@+id/chip_office" />
+            <include layout="@layout/item_chip" android:id="@+id/chip_fitness" />
+            <include layout="@layout/item_chip" android:id="@+id/chip_hospital" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Search bar -->
+    <LinearLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="12dp"
+        android:paddingHorizontal="16dp"
+        android:background="@drawable/bg_rounded_white"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:hint="Search your destination"
+            android:background="@null"
+            android:inputType="text" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_mic"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,25 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Outer circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M90,30a20,20 0 1,0 0.1,0z" />
+
+    <!-- Inner outlined circle -->
+    <path
+        android:strokeColor="#111C3C"
+        android:strokeWidth="1"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M100,30a30,30 0 1,0 0.1,0z" />
+
+    <!-- Overlapping thin circle -->
+    <path
+        android:strokeColor="#567AF2"
+        android:strokeWidth="1"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M110,30a40,40 0 1,0 0.1,0z" />
+</vector>

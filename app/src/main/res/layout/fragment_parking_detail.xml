@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Google Map Fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+
+    <!-- Other UI elements here -->
+
+
+
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_rounded_white"
+        android:padding="8dp"
+        android:src="@drawable/ic_back"
+        android:layout_gravity="top|start" />
+
+    <!-- My Location Button -->
+    <ImageView
+        android:id="@+id/myLocationButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_rounded_primary"
+        android:padding="16dp"
+        android:src="@drawable/ic_location_target" />
+
+    <!-- Bottom Sheet -->
+    <LinearLayout
+        android:id="@+id/parkingBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_rounded_white"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PARKING DETAIL"
+            android:textStyle="bold"
+            android:textColor="@color/text_secondary" />
+
+        <!-- You can expand this section with more details -->
+    </LinearLayout>
+</FrameLayout>

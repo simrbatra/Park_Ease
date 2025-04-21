@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Back Icon -->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#111C3C" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter\nverification code"
+            android:textColor="#111C3C"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/ivBack"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Instructions -->
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Please enter the verification code we sent to your mobile (+62) 898 7654 3210"
+            android:textColor="#69728A"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Code Label -->
+        <TextView
+            android:id="@+id/tvCodeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verification Code"
+            android:textColor="#111C3C"
+            android:textSize="14sp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/tvInstructions"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Code Inputs -->
+        <LinearLayout
+            android:id="@+id/codeInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCodeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <EditText
+                android:id="@+id/etCode1"
+                style="@style/CodeInputStyle"
+                android:text="P"/>
+
+            <EditText
+                android:id="@+id/etCode2"
+                style="@style/CodeInputStyle"
+                android:text="9"/>
+
+            <EditText
+                android:id="@+id/etCode3"
+                style="@style/CodeInputStyle"
+                android:text="7"/>
+
+            <EditText
+                android:id="@+id/etCode4"
+                style="@style/CodeInputStyle"
+                android:text="5"/>
+
+            <EditText
+                android:id="@+id/etCode5"
+                style="@style/CodeInputStyle"
+                android:text="3"/>
+        </LinearLayout>
+
+        <!-- Resend Code -->
+        <TextView
+            android:id="@+id/tvResend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend Code"
+            android:textColor="#111C3C"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/codeInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Verify Button -->
+        <Button
+            android:id="@+id/btnVerify"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Verify"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_button_rounded"
+            app:layout_constraintTop_toBottomOf="@id/tvResend"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

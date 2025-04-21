@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splashLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:gravity="center">
+
+    <!-- Top background vector -->
+    <ImageView
+        android:id="@+id/bgTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_splash_top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="Top Decoration" />
+
+    <!-- App name or logo -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parkir.in"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_blue"
+        android:layout_centerInParent="true" />
+
+    <!-- Bottom background vector -->
+    <ImageView
+        android:id="@+id/bgBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_splash_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="Bottom Decoration" />
+
+</RelativeLayout>

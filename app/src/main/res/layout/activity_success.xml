@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#567AF2">
+
+    <!-- Top right decorative circles (optional, can be vector drawable or ImageView) -->
+    <ImageView
+        android:id="@+id/topDecor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_success_top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Center checkmark icon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/checkIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_check_circle"
+            android:background="@drawable/bg_white_circle"
+            android:padding="24dp" />
+
+        <TextView
+            android:id="@+id/tvSuccessTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Success!"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/tvSuccessMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Congrats, your account\nhas been successfully created"
+            android:textColor="#DDE5FF"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+
+    <!-- Bottom decoration (optional) -->
+    <ImageView
+        android:id="@+id/bottomDecor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_success_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp" />
+</RelativeLayout>

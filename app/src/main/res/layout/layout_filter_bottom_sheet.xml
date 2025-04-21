@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:elevation="8dp">
+
+    <!-- Top drag indicator -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="@drawable/bg_drag_handle"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center" />
+
+    <!-- Filter Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FILTER"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_secondary" />
+
+    <!-- Distance Label -->
+    <TextView
+        android:id="@+id/distanceLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Distance"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="16dp" />
+
+    <!-- Distance Value -->
+    <TextView
+        android:id="@+id/distanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9 km"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/text_secondary" />
+
+    <!-- Seekbar -->
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/distanceSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="0"
+        android:valueTo="100"
+        android:stepSize="1"
+        android:contentDescription="Distance filter slider, adjust to select distance in kilometers" />
+
+
+    <!-- Valet Parking Toggle -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valet Parking"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/valetSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/primary"
+            app:trackTint="@color/primary_light" />
+    </LinearLayout>
+
+    <!-- Apply Filter Button -->
+    <Button
+        android:id="@+id/applyFilterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply Filter"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/primary"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_rounded_primary" />
+
+</LinearLayout>

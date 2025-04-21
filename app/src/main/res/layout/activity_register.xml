@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register to\nParkir.in account"
+            android:textColor="#111C3C"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:lineSpacingExtra="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Phone Label -->
+        <TextView
+            android:id="@+id/phoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textColor="#111C3C"
+            android:textSize="14sp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Phone Input Container -->
+        <LinearLayout
+            android:id="@+id/phoneInputContainer"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+
+            android:elevation="2dp"
+            android:clipToPadding="false"
+            android:layout_gravity="center"
+            android:backgroundTint="@null"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/bg_edit_text_rounded"
+            app:layout_constraintTop_toBottomOf="@id/phoneLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_phone"
+                app:tint="#69728A" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@android:color/transparent"
+                android:hint="+6289876543210"
+                android:textColor="#111C3C"
+                android:inputType="phone"
+                android:textSize="16sp"
+                android:textColorHint="#B0B8D1" />
+        </LinearLayout>
+
+        <!-- Terms and Conditions -->
+        <TextView
+            android:id="@+id/tvTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms and condition"
+            android:textColor="#567AF2"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/tvLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- I Have Account -->
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I have account"
+            android:textColor="#111C3C"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/btnRegister"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Register"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#567AF2"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button_rounded"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
