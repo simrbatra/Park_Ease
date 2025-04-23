@@ -5,5 +5,7 @@
     <string name="sample_rules">
     These rules and regulations for the use of Dummy University Parking Area. In these Rules, unless the context otherwise requires...
 </string>
+    <string name="title_activity_find_nearby_parking">FindNearbyParkingActivity</string>
+    <string name="title_activity_book_and_park">BookAndParkActivity</string>
 
 </resources>

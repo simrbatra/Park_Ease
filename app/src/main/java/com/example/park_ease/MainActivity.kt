@@ -15,8 +15,8 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+            startActivity(Intent(this, FindNearbyParkingActivity::class.java))
+
         }, 2000)
     }
 }

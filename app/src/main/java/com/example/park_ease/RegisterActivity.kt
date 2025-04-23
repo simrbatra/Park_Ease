@@ -2,6 +2,7 @@ package com.example.park_ease
 
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -29,16 +30,19 @@ class RegisterActivity : AppCompatActivity() {
         registerBtn.setOnClickListener {
             val phone = phoneInput.text.toString()
             if (phone.isNotEmpty()) {
-                Toast.makeText(this, "Phone: $phone", Toast.LENGTH_SHORT).show()
-                // Navigate or process registration here
+                // Save phone or pass it to verification if needed
+                val phoneNumber = intent.getStringExtra("phone_number")
+                Toast.makeText(this, "Verifying: $phoneNumber", Toast.LENGTH_SHORT).show()
+
             } else {
                 Toast.makeText(this, "Please enter your phone number", Toast.LENGTH_SHORT).show()
             }
         }
 
         loginText.setOnClickListener {
-            // Navigate to Login Activity
-            Toast.makeText(this, "Go to Login", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
+
     }
 }
