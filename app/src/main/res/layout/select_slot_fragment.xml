@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select slot"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#111111"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Parking Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Left Side -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/slotA01" android:text="A01" style="@style/SlotStyle"/>
+                <ImageView android:src="@drawable/ic_car" style="@style/ParkCarStyle"/>
+                <TextView
+                    android:id="@+id/slotA04" android:text="A04" style="@style/SlotStyle"/>
+                <TextView
+                    android:id="@+id/slotA05" android:text="A05" style="@style/SlotStyle"/>
+                <ImageView android:src="@drawable/ic_car" style="@style/ParkCarStyle"/>
+            </LinearLayout>
+
+            <!-- Center Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:text="Entry"
+                    android:textColor="#777"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView android:id="@+id/slotA08" android:text="A08" style="@style/SlotStyle"/>
+                    <ImageView android:src="@drawable/ic_car" style="@style/ParkCarStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView android:id="@+id/slotA10" android:text="A10" style="@style/SlotStyle"/>
+                    <ImageView android:src="@drawable/ic_car" style="@style/ParkCarStyle"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView android:id="@+id/slotA12" android:text="A12" style="@style/SlotStyle"/>
+                    <ImageView android:src="@drawable/ic_car" style="@style/ParkCarStyle"/>
+                </LinearLayout>
+
+                <TextView
+                    android:text="Exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#777"
+                    android:layout_marginTop="16dp"/>
+            </LinearLayout>
+
+            <!-- Right Cars -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start">
+
+                <ImageView android:src="@drawable/ic_car" style="@style/ParkCarStyle"/>
+                <ImageView android:src="@drawable/ic_car" style="@style/ParkCarStyle"/>
+                <ImageView android:src="@drawable/ic_car" style="@style/ParkCarStyle"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Continue Button -->
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#5271FF"
+            android:background="@drawable/bg_button_rounded"/>
+    </LinearLayout>
+</ScrollView>
