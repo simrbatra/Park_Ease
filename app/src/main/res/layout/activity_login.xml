@@ -1,118 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@color/white">
+    android:background="#F6F8FF"
+    android:padding="24dp"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/bg_login_top" />
-
+        <!-- Title -->
         <TextView
+            android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login to\nyour account"
-            android:textSize="22sp"
-            android:textColor="#111C3C"
+            android:text="Login"
+            android:textSize="26sp"
             android:textStyle="bold"
-            android:layout_marginTop="16dp" />
+            android:textColor="#111111"
+            android:layout_marginBottom="24dp" />
 
-        <!-- Phone Input -->
-        <LinearLayout
+        <!-- Phone Field -->
+        <EditText
+            android:id="@+id/etPhone"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="24dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="16dp"
-            android:background="@drawable/bg_edit_text_rounded3">
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_phone2"
-                app:tint="#69728A" />
-
-            <EditText
-                android:id="@+id/etPhone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="12dp"
-                android:hint="+6289876543210"
-                android:background="@android:color/transparent"
-                android:textColorHint="#B0B8D1"
-                android:inputType="phone"
-                android:paddingVertical="12dp"
-                android:minHeight="48dp" />     <!-- ADD THIS -->
-
-        </LinearLayout>
-
-        <!-- Password Input -->
-        <LinearLayout
+        <!-- Password Field with Eye Icon -->
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="16dp"
-            android:background="@drawable/bg_edit_text_rounded3">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_lock2"
-                app:tint="#69728A" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
 
             <EditText
                 android:id="@+id/etPassword"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:layout_marginStart="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Password"
-                android:background="@android:color/transparent"
-                android:textColorHint="#B0B8D1"
                 android:inputType="textPassword"
-                android:paddingVertical="12dp"
-                android:minHeight="48dp" />     <!-- ADD THIS -->
-
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/ivTogglePassword"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_eye2" />
-        </LinearLayout>
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_eye" />
+        </RelativeLayout>
 
-        <!-- Switch to Register -->
+        <!-- Forgot Password -->
         <TextView
-            android:id="@+id/tvRegister"
+            android:id="@+id/tvForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="I don’t have account"
-            android:textColor="#111C3C"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_marginTop="24dp" />
+            android:text="Forgot Password?"
+            android:textColor="#3F51B5"
+            android:textSize="14sp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="24dp" />
 
         <!-- Login Button -->
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/bg_button_rounded"
+            android:layout_height="wrap_content"
             android:text="Login"
+            android:textAllCaps="false"
+            android:background="@drawable/rounded_button_bg"
             android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Register Text -->
+        <TextView
+            android:id="@+id/tvRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? Register"
+            android:textColor="#3F51B5"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 </ScrollView>

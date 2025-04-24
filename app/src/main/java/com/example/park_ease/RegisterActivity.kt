@@ -28,12 +28,11 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         registerBtn.setOnClickListener {
-            val phone = phoneInput.text.toString()
+            val phone = phoneInput.text.toString().trim()
             if (phone.isNotEmpty()) {
-                // Save phone or pass it to verification if needed
-                val phoneNumber = intent.getStringExtra("phone_number")
-                Toast.makeText(this, "Verifying: $phoneNumber", Toast.LENGTH_SHORT).show()
-
+                val intent = Intent(this, VerificationActivity::class.java)
+                intent.putExtra("phone_number", phone)
+                startActivity(intent)
             } else {
                 Toast.makeText(this, "Please enter your phone number", Toast.LENGTH_SHORT).show()
             }
@@ -43,6 +42,7 @@ class RegisterActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
 
     }
 }

@@ -58,6 +58,14 @@
         <activity
             android:name=".ForgotPasswordActivity"
             android:exported="true" />
+        <activity android:name=".VerificationActivity"
+            android:exported="true" />
+        <activity android:name=".CreateAccountActivity"
+            android:exported="true" />
+        <activity android:name=".SuccessActivity"
+            android:exported="true" />
+        <activity android:name=".HomeActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -1,7 +1,6 @@
 package com.example.park_ease
 
-
-
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -27,8 +26,10 @@ class VerificationActivity : AppCompatActivity() {
                     etCode3.text + etCode4.text + etCode5.text
 
             if (code.length == 5) {
-                Toast.makeText(this, "Code: $code", Toast.LENGTH_SHORT).show()
-                // Proceed with verification
+                // Proceed to CreateAccountActivity
+                val intent = Intent(this, CreateAccountActivity::class.java)
+                startActivity(intent)
+                 // optional: finish this activity if you don't want to come back to it
             } else {
                 Toast.makeText(this, "Enter complete code", Toast.LENGTH_SHORT).show()
             }

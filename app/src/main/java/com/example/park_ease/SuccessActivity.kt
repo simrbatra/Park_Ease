@@ -18,10 +18,10 @@ class SuccessActivity : AppCompatActivity() {
         // Delay before closing or navigating to another screen
         Handler(Looper.getMainLooper()).postDelayed({
             // Uncomment the below line to go to HomeActivity instead of just finishing
-            // startActivity(Intent(this, HomeActivity::class.java))
+             startActivity(Intent(this, HomeActivity::class.java))
 
             // Just close the SuccessActivity
-            finish()
+
         }, 2500) // 2.5 seconds delay
     }
 }

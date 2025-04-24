@@ -81,7 +81,7 @@ class FindNearbyParkingActivity : AppCompatActivity(), OnMapReadyCallback {
         // Delay 3 seconds then move to BookAndParkActivity
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, BookAndParkActivity::class.java))// Prevent going back to this screen
-        }, 2000)
+        }, 3000)
     }
 
     private fun addParkingMarker(position: LatLng, title: String) {

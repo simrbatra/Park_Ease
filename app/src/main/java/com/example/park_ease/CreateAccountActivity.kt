@@ -1,5 +1,6 @@
 package com.example.park_ease
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
@@ -19,12 +20,24 @@ class CreateAccountActivity : AppCompatActivity() {
         val createBtn = findViewById<Button>(R.id.btnCreateAccount)
 
         createBtn.setOnClickListener {
+            val nameText = name.text.toString().trim()
+            val emailText = email.text.toString().trim()
+            val passwordText = password.text.toString().trim()
+
+            if (nameText.isEmpty() || emailText.isEmpty() || passwordText.isEmpty()) {
+                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             if (!checkbox.isChecked) {
                 Toast.makeText(this, "Please accept Terms and Conditions", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            // Handle form submission
-            Toast.makeText(this, "Account Created!", Toast.LENGTH_SHORT).show()
+
+            // Proceed to SuccessActivity
+            val intent = Intent(this, SuccessActivity::class.java)
+            startActivity(intent)
+             // optional, to close the CreateAccountActivity
         }
     }
 }

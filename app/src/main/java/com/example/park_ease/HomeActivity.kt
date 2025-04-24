@@ -8,6 +8,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // TODO: Add logic for dynamic categories or search handling if needed
+
     }
 }
